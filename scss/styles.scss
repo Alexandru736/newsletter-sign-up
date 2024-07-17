@@ -1,0 +1,278 @@
+@import "variables";
+@import "globals";
+
+body {
+    height: calc(100vh - 1px);
+    font-size: $font-size-paragraph;
+    font-weight: $regular-font-weight;
+    font-family: 'Roboto';
+    color: $clr-dark-slate-grey;
+    line-height: 1.6rem;
+    background-color: $clr-white;
+    
+    main {
+
+        .sign-up-page {
+            display: none;
+            
+            &--active {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .sign-up {
+                &__image {
+                    &--mobile {
+                        display: block;
+                    }
+
+                    &--desktop {
+                        display: none;
+                    }
+                }
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 2rem;
+
+                .sign-up {
+                    &__title {
+                        font-size: 2.2rem;
+                        font-weight: $bold-font-weight;
+                    }
+
+                    &__description {
+                        font-size: $font-size-paragraph;
+                        color: $clr-charcoal-grey;
+                        font-weight: $regular-font-weight;
+                    }
+                    
+                    &__list-of-benefits {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.5rem;
+
+                        li {
+                            list-style: none;
+                            display: flex;
+                            gap: 1rem;
+                            align-items: flex-start;
+                            
+                            p {
+                                line-height: 1.3rem;
+                            }
+                        } 
+                    }   
+                }
+                
+                #form {
+                    .label {
+                        display: flex;
+                        justify-content: space-between;
+
+                        &__email {
+                            display: block;
+                            font-weight: $bold-font-weight;
+                            font-size: .8rem;
+                            color: $clr-charcoal-grey; 
+                        }
+
+                        &__email--error {
+                            color: $clr-tomato;   
+                        }
+
+                        &__error {
+                            display: none;
+                        }
+
+                        &__error--active {
+                            display: inline;
+                            color: $clr-tomato;
+                            font-weight: $bold-font-weight;
+                            font-size: .8rem;
+                        }
+                    }
+
+                    #email {
+                        width: 100%;
+                        display: inline-block;
+                        height: 3rem;
+                        padding: 1rem;
+                        border-radius: 7px;
+                        border: 1px solid $clr-grey;
+                        margin-bottom: 2rem;
+                        
+                        &.email--error {
+                            border: 1px solid $clr-tomato;
+                            background-color: hsl(4, 100%, 67%, 0.2);;
+                        }
+
+                        &.email--error::placeholder {
+                            color: $clr-tomato;
+                            opacity: 1;
+                        }
+                    }
+
+                    
+
+                    .btn__subscripe {
+                        width: 100%;
+                        padding: 1rem;
+                        background-color: $clr-dark-slate-grey;
+                        border-radius: 7px;
+                        text-align: center;
+
+                        .subscribe-text {
+                            color: $clr-white;
+                            font-weight: $bold-font-weight;
+                        }
+                    }
+                }
+            }
+        }
+
+        .success-message {
+            padding: 3rem 1.5rem;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+
+            &--active {
+                display: flex;
+            }
+            
+            .content {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+
+                .success-icon {
+                    margin-top: 100px;
+                    width: 20%;
+                }
+
+                .success-message {
+                    &__title {
+                        font-size: 2.2rem;
+                        font-weight: $bold-font-weight;
+                        line-height: 2.3rem;
+                    }
+
+                    &__description {
+                        color: $clr-dark-slate-grey;
+                        span {
+                            font-weight: $bold-font-weight;
+                        }
+                    }
+                }
+            }
+            
+            &__btn--dismiss {
+                width: 100%;
+                padding: 1rem;
+                background-color: $clr-dark-slate-grey;
+                border-radius: 7px;
+                text-align: center;
+
+                span {
+                    color: $clr-white;
+                    font-weight: $bold-font-weight;
+                }
+            }
+        }
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 765px) {
+    body {
+        background-color: $clr-dark-slate-grey;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .sign-up-page {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                width: 900px;
+                height: 700px;
+                background-color: $clr-white;
+                border-radius: 20px;
+                padding: 1.5rem;
+                gap: 1rem;
+
+                .sign-up {
+
+                    &__image {
+                        &--mobile {
+                            display: none;
+                        }
+
+                        &--desktop {
+                            display: block;
+                            width: 50%;
+                            height: 100%;
+                        }
+                    }
+
+                    
+                }
+                
+                .container {
+                    padding: 1.5rem;
+                }
+            }
+
+            .success-message {
+                background-color: $clr-white;
+                width: 400px;
+                height: 430px;
+                justify-content: unset;
+                border-radius: 20px;
+                padding: 3rem;
+
+
+                .content {
+                    .success-icon {
+                        margin: 0;
+                        width: 15%;
+                    }
+
+                    .success-message {
+                        &__description {
+                            font-size: .9rem;
+                        }
+
+                    }
+
+                    margin-bottom: 1.5rem;
+                }
+
+                .success-message {
+                    &__btn {
+                        &--dismiss {
+                            padding: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+            display: block;
+            color: white;
+        }
+    }
+}
