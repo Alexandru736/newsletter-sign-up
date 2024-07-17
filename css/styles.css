@@ -1,1 +1,217 @@
-/*# sourceMappingURL=styles.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: calc(100vh - 1px);
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Roboto";
+  color: hsl(234, 29%, 20%);
+  line-height: 1.6rem;
+  background-color: hsl(0, 0%, 100%);
+}
+body main .sign-up-page {
+  display: none;
+}
+body main .sign-up-page--active {
+  display: flex;
+  flex-direction: column;
+}
+body main .sign-up-page .sign-up__image--mobile {
+  display: block;
+}
+body main .sign-up-page .sign-up__image--desktop {
+  display: none;
+}
+body main .sign-up-page .container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+body main .sign-up-page .container .sign-up__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+body main .sign-up-page .container .sign-up__description {
+  font-size: 16px;
+  color: hsl(235, 18%, 26%);
+  font-weight: 400;
+}
+body main .sign-up-page .container .sign-up__list-of-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+body main .sign-up-page .container .sign-up__list-of-benefits li {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+body main .sign-up-page .container .sign-up__list-of-benefits li p {
+  line-height: 1.3rem;
+}
+body main .sign-up-page .container #form .label {
+  display: flex;
+  justify-content: space-between;
+}
+body main .sign-up-page .container #form .label__email {
+  display: block;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: hsl(235, 18%, 26%);
+}
+body main .sign-up-page .container #form .label__email--error {
+  color: hsl(4, 100%, 67%);
+}
+body main .sign-up-page .container #form .label__error {
+  display: none;
+}
+body main .sign-up-page .container #form .label__error--active {
+  display: inline;
+  color: hsl(4, 100%, 67%);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+body main .sign-up-page .container #form #email {
+  width: 100%;
+  display: inline-block;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 7px;
+  border: 1px solid hsl(231, 7%, 60%);
+  margin-bottom: 2rem;
+}
+body main .sign-up-page .container #form #email.email--error {
+  border: 1px solid hsl(4, 100%, 67%);
+  background-color: hsla(4, 100%, 67%, 0.2);
+}
+body main .sign-up-page .container #form #email.email--error::-moz-placeholder {
+  color: hsl(4, 100%, 67%);
+  opacity: 1;
+}
+body main .sign-up-page .container #form #email.email--error::placeholder {
+  color: hsl(4, 100%, 67%);
+  opacity: 1;
+}
+body main .sign-up-page .container #form .btn__subscripe {
+  width: 100%;
+  padding: 1rem;
+  background-color: hsl(234, 29%, 20%);
+  border-radius: 7px;
+  text-align: center;
+}
+body main .sign-up-page .container #form .btn__subscripe .subscribe-text {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+body main .success-message {
+  padding: 3rem 1.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+body main .success-message--active {
+  display: flex;
+}
+body main .success-message .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+body main .success-message .content .success-icon {
+  margin-top: 100px;
+  width: 20%;
+}
+body main .success-message .content .success-message__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 2.3rem;
+}
+body main .success-message .content .success-message__description {
+  color: hsl(234, 29%, 20%);
+}
+body main .success-message .content .success-message__description span {
+  font-weight: 700;
+}
+body main .success-message__btn--dismiss {
+  width: 100%;
+  padding: 1rem;
+  background-color: hsl(234, 29%, 20%);
+  border-radius: 7px;
+  text-align: center;
+}
+body main .success-message__btn--dismiss span {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+body footer {
+  display: none;
+}
+
+@media screen and (min-width: 765px) {
+  body {
+    background-color: hsl(234, 29%, 20%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  body main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body main .sign-up-page {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+    height: 700px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  body main .sign-up-page .sign-up__image--mobile {
+    display: none;
+  }
+  body main .sign-up-page .sign-up__image--desktop {
+    display: block;
+    width: 50%;
+    height: 100%;
+  }
+  body main .sign-up-page .container {
+    padding: 1.5rem;
+  }
+  body main .success-message {
+    background-color: hsl(0, 0%, 100%);
+    width: 400px;
+    height: 430px;
+    justify-content: unset;
+    border-radius: 20px;
+    padding: 3rem;
+  }
+  body main .success-message .content {
+    margin-bottom: 1.5rem;
+  }
+  body main .success-message .content .success-icon {
+    margin: 0;
+    width: 15%;
+  }
+  body main .success-message .content .success-message__description {
+    font-size: 0.9rem;
+  }
+  body main .success-message .success-message__btn--dismiss {
+    padding: 0.5rem;
+  }
+  body footer {
+    display: block;
+    color: white;
+  }
+}/*# sourceMappingURL=styles.css.map */
